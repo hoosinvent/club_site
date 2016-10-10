@@ -1,0 +1,1 @@
+web: gunicorn clubsite.wsgi --log-file -
