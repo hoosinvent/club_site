@@ -19,6 +19,7 @@
                 </div>
             {%  endif %}
             <form role="form" action="{% url 'club:contact'%}" method="post">
+                <p><b>* represents a required field</b></p>
                 {% crispy form %}
             </form>
 
