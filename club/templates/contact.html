@@ -20,7 +20,7 @@
             {%  endif %}
             <form role="form" action="{% url 'club:contact'%}" method="post">
                 {% csrf_token %}
-                {{ form}}
+                {{ form.as_ul }}
                 <button type="submit">Submit</button>
             </form>
 
