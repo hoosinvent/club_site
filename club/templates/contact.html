@@ -10,11 +10,20 @@
               <div class="jumbotron text-center">
                   <h1>Contact Us</h1>
               </div>
+            {% if email_sent %}
+                <div class="alert alert-success alert-dismissible fade in" role="alert">
+                    <button class="close" aria-label="Close" type="button" data-dismiss="alert">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <strong>Thanks for your email!</strong> We'll be in touch soon.
+                </div>
+            {%  endif %}
             <form role="form" action="{% url 'club:contact'%}" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form}}
                 <button type="submit">Submit</button>
             </form>
+
           </div>
       </div>
 {% endblock %}}
