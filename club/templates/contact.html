@@ -19,10 +19,10 @@
                 </div>
             {%  endif %}
             <form role="form" action="{% url 'club:contact'%}" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-default">Submit</button>
+                {% crispy form %}
             </form>
+
+          <br><br>
 
           </div>
       </div>
