@@ -10,6 +10,11 @@
               <div class="jumbotron text-center">
                   <h1>Contact Us</h1>
               </div>
+            <form role="form" action="{% url 'club:contact'%}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
           </div>
       </div>
 {% endblock %}}
