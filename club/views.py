@@ -33,3 +33,6 @@ def contact(request):
 			response = sg.client.mail.send.post(request_body=data)
 			form = ContactForm()
 	return render(request, "contact.html", {'form':form, 'email_sent':response})
+
+def project(request):
+	return render(request, "project.html")

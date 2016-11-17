@@ -9,6 +9,7 @@ from . import views
 
 
 urlpatterns = [
+	url(r'project/$', views.project, name='project'),
 	url(r'contact/$', views.contact, name='contact'),
 	url(r'$', views.index, name='index'),
 ]
